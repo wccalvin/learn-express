@@ -5,6 +5,7 @@ Express is a powerful and flexible Javascript framework for creating web servers
 ## Installation
 
 - Install instructions [here](https://expressjs.com/en/starter/installing.html)
+
   `mkdir myapp`
   `cd myapp`
   `npm init` (accept defaults)
@@ -27,6 +28,6 @@ Express is a powerful and flexible Javascript framework for creating web servers
 
 ## Table of contents
 
-| #   | Lesson              | Example |
-| --- | ------------------- | ------- |
+| #   | Lesson              | Example                                                                              |
+| --- | ------------------- | ------------------------------------------------------------------------------------ |
 | 1   | App setup to listen | [src](https://github.com/wccalvin/learn-express/tree/main/myapp/01-setup-app-listen) |
