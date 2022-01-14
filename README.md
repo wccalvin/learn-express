@@ -7,8 +7,11 @@ Express is a powerful and flexible Javascript framework for creating web servers
 - Install instructions [here](https://expressjs.com/en/starter/installing.html)
 
   `mkdir myapp`
+
   `cd myapp`
+
   `npm init` (accept defaults)
+
   `npm install express --save`
 
 ## Setup styling
