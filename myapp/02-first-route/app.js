@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 // first route
 // syntax: path string and callback function
 app.get("/", (req, res) => {
-  res.send("hello, world!");
+  // console.log(req);
+  res.send("<h1>hello, world!</h1>");
 });
 
 // invoke app listen method
