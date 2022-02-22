@@ -10,7 +10,7 @@ Express is a powerful and flexible Javascript framework for creating web servers
   ```bash
   mkdir myapp
   cd myapp
-  npm init  # accept defaults
+  npm init -y
   npm install express --save
   ```
 
