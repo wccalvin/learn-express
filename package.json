@@ -300,6 +300,7 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
+    "dev": "nodemon flashcards/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
