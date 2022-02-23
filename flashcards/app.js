@@ -4,8 +4,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.set("view engine", "pug");
+
 app.get("/", (req, res) => {
-  res.send("<h1>Hello, there!</h1>");
+  res.render("index");
 });
 app.get("/hello", (req, res) => {
   res.send("<h1>Hello, JS dev!</h1>");
