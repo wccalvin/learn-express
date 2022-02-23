@@ -12,8 +12,8 @@ app.get("/", (req, res) => {
 });
 app.get("/cards", (req, res) => {
   res.render("card", {
-    prompt: "Who is burried in Grant's tomb?",
-    hint: "Think about whose tomb it is.",
+    prompt: "Who s the creator of python?",
+    hint: "Dutch Programmer.",
   });
 });
 
