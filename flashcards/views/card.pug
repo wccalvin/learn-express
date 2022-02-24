@@ -1,14 +1,7 @@
-doctype html
-html(lang='en')
-    head
-        title Landing Page
-    body
-        header
-            h1 Flash Cards
-        section#content
-            h2=prompt
-            if hint
-                p
-                    i Hint: #{hint}
-        footer
-        p An app to help you study
+extends layout
+block content
+    section#content
+        h2=prompt
+        if hint
+            p
+                i Hint: #{hint}
