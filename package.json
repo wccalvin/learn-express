@@ -26,7 +26,7 @@
     "babel-walk": "^3.0.0-canary-5",
     "balanced-match": "^1.0.2",
     "binary-extensions": "^2.2.0",
-    "body-parser": "^1.19.1",
+    "body-parser": "^1.19.2",
     "boxen": "^5.1.2",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.2",
@@ -75,11 +75,8 @@
     "escape-goat": "^2.1.1",
     "escape-html": "^1.0.3",
     "escape-string-regexp": "^4.0.0",
-    "eslint": "^8.9.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-module-utils": "^2.7.2",
-    "eslint-plugin-import": "^2.25.4",
     "eslint-scope": "^7.1.0",
     "eslint-utils": "^3.0.0",
     "eslint-visitor-keys": "^3.1.0",
@@ -313,5 +310,10 @@
   "bugs": {
     "url": "https://github.com/wccalvin/learn-express/issues"
   },
-  "homepage": "https://github.com/wccalvin/learn-express#readme"
+  "homepage": "https://github.com/wccalvin/learn-express#readme",
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
 }
