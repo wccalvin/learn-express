@@ -10,6 +10,7 @@ const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// app properties
 app.set("view engine", "pug");
 app.set("views", `${__dirname}/views`);
 
@@ -20,6 +21,11 @@ app.get("/", (req, res) => {
   } else {
     res.redirect("/hello");
   }
+});
+
+app.post("/goodbye", (req, res) => {
+  res.clearCookie("username");
+  res.redirect("/hello");
 });
 
 app.get("/hello", (req, res) => {
