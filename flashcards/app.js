@@ -1,4 +1,3 @@
-const { response } = require("express");
 const express = require("express");
 
 const app = express();
@@ -17,6 +16,7 @@ app.get("/hello", (req, res) => {
 });
 
 app.post("/hello", (req, res) => {
+  console.dir(req.body);
   res.render("hello");
 });
 
