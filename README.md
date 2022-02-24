@@ -19,10 +19,11 @@ Express is a powerful and flexible Javascript framework for creating web servers
 - Install `prettier` from `vscode`.
 - Install `eslint` from the `repo` - `npm install eslint --save`
 - Configure `eslint` settings - `node_modules/.bin/eslint --init` (choose `To check syntax, find problems, and enforce code style` and `airbnb`)
+- For pug formatting: `npm add --save-dev prettier @prettier/plugin-pug`
 - vscode setting as below:
 
   ```json
-  "[javascript]": {
+  "[javascript, pug]": {
       "editor.tabSize": 2,
       "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode",
