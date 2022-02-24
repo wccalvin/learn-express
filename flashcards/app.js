@@ -16,6 +16,10 @@ app.get("/hello", (req, res) => {
   res.render("hello");
 });
 
+app.post("/hello", (req, res) => {
+  res.render("hello");
+});
+
 app.get("/cards", (req, res) => {
   res.render("card", {
     prompt: "Who is the creator of python?",
