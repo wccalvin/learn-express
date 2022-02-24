@@ -23,7 +23,7 @@ Express is a powerful and flexible Javascript framework for creating web servers
 - vscode setting as below:
 
   ```json
-  "[javascript]": {
+  "[javascript, pug]": {
       "editor.tabSize": 2,
       "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode",
