@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+    head
+        //- example for interpolation variable directly
+        title=title
+    body
+        header
+            h1 Playground for testing concepts
+        section#content
+            //- example for conditionals
+            if name
+                //- variable interpolation in textual context
+                h2 Welcome #{name} to the sandbox page!
+            else
+                h2 Welcome to the sandbox page.
+            ul
+                //- example for using loops
+                each color in colors
+                    li=color
+        footer
+        p sandbox testing page

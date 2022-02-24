@@ -3,6 +3,7 @@ const express = require("express");
 
 const app = express();
 const port = 3000;
+const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
@@ -10,10 +11,19 @@ app.set("views", __dirname + "/views");
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.get("/cards", (req, res) => {
   res.render("card", {
-    prompt: "Who s the creator of python?",
+    prompt: "Who is the creator of python?",
     hint: "Dutch Programmer.",
+  });
+});
+
+app.get("/sandbox", (req, res) => {
+  res.render("sandbox", {
+    title: "Sandbox Page",
+    name: "Clayton",
+    colors,
   });
 });
 
