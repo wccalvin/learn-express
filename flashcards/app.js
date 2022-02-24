@@ -19,8 +19,7 @@ app.get("/hello", (req, res) => {
 });
 
 app.post("/hello", (req, res) => {
-  console.log(req.body);
-  res.render("hello");
+  res.render("hello", { name: req.body.username });
 });
 
 app.get("/cards", (req, res) => {
