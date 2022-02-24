@@ -1,11 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 const port = 3000;
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 
+// middle-ware
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
 app.set("view engine", "pug");
 app.set("views", `${__dirname}/views`);
 
@@ -14,11 +18,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/hello", (req, res) => {
-  // eslint-disable-next-line quotes
-  res.render("hello");
+  res.render("hello", { name: req.cookies.username });
 });
 
 app.post("/hello", (req, res) => {
+  res.cookie("username", req.body.username);
   res.render("hello", { name: req.body.username });
 });
 

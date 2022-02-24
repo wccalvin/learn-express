@@ -50,6 +50,7 @@
     "content-disposition": "^0.5.4",
     "content-type": "^1.0.4",
     "cookie": "^0.4.1",
+    "cookie-parser": "^1.4.6",
     "cookie-signature": "^1.0.6",
     "cross-spawn": "^7.0.3",
     "crypto-random-string": "^2.0.0",
