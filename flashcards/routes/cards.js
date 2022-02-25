@@ -12,6 +12,14 @@ router.get("/:id", (req, res) => {
   const templateData = { text };
   if (side === "question") {
     templateData.hint = hint;
+    templateData.id = id;
+    templateData.sideToShow = "answer";
+    templateData.sideToShowDisplay = "Answer";
+  } else if (side === "answer") {
+    templateData.hint = hint;
+    templateData.id = id;
+    templateData.sideToShow = "question";
+    templateData.sideToShowDisplay = "Question";
   }
   res.render("card", templateData);
 });
