@@ -14,48 +14,23 @@ app.use(cookieParser());
 app.set("view engine", "pug");
 app.set("views", `${__dirname}/views`);
 
-app.get("/", (req, res) => {
-  const name = req.cookies.username;
-  if (name) {
-    res.render("index", { name });
-  } else {
-    res.redirect("/hello");
-  }
-});
+const routes = require("./routes");
+const cardRoutes = require("./routes/cards");
 
-app.post("/goodbye", (req, res) => {
-  res.clearCookie("username");
-  res.redirect("/hello");
-});
+app.use(routes);
+app.use("/cards", cardRoutes);
 
-app.get("/hello", (req, res) => {
-  const name = req.cookies.username;
-  if (name) {
-    res.redirect("/");
-  } else {
-    res.render("hello");
-  }
-});
+// app.use((req, res, next) => {
+//   const err = new Error("Not Found");
+//   err.status = 404;
+//   next(err);
+// });
 
-app.post("/hello", (req, res) => {
-  res.cookie("username", req.body.username);
-  res.redirect("/");
-});
-
-app.get("/cards", (req, res) => {
-  res.render("card", {
-    prompt: "Who is the creator of python?",
-    hint: "Dutch Programmer.",
-  });
-});
-
-app.get("/sandbox", (req, res) => {
-  res.render("sandbox", {
-    title: "Sandbox Page",
-    name: "Clayton",
-    colors,
-  });
-});
+// app.use((err, req, res, next) => {
+//   res.locals.error = err;
+//   res.status(err.status);
+//   res.render("error");
+// });
 
 app.listen(port, () => {
   console.log(`The app is running on http://localhost:${port}/`);
